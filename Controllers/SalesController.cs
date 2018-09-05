@@ -24,6 +24,7 @@ namespace MvcApplicationReg.Controllers
         {
             List<SalesData> salesdata = new List<SalesData>();
             salesdata = objModel.getSalesData(Searchtext);
+            
             return Json(salesdata);            
         }
 
