@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+//using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using MvcApplicationReg.Models;
 
 namespace MvcApplicationReg.Controllers
@@ -24,7 +25,7 @@ namespace MvcApplicationReg.Controllers
         {
             List<SalesData> salesdata = new List<SalesData>();
             salesdata = objModel.getSalesData(Searchtext);
-            
+
             return Json(salesdata);            
         }
 
@@ -41,7 +42,7 @@ namespace MvcApplicationReg.Controllers
         {
             List<SalesData> userslist = new List<SalesData>();
             userslist = objModel.getallusers();
-            Session["count"] = userslist.Count();
+            //Session["count"] = userslist.Count();
             return Json(userslist);
         }
 

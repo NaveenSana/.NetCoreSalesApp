@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Configuration;
+//using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -9,6 +9,7 @@ using System.IO;
 using System.Net;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Mail;
+using System.Configuration.ConfigurationManager;
 
 namespace MvcApplicationReg.Models
 {
@@ -32,7 +33,7 @@ namespace MvcApplicationReg.Models
 
     public class SalesModel
     {
-        string objConn = ConfigurationManager.ConnectionStrings["testDBConn1"].ToString();
+        string objConn =  System.Configuration.ConfigurationManager.ConnectionStrings["testDBConn1"].ToString();
 
         public List<SalesData> getSalesData(int Searchtext)
         {
